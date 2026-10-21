@@ -234,7 +234,7 @@
     requestAnimationFrame(step);
   }
 
-  /* ---------- steam over hot dishes (animates only while on screen) ---------- */
+  /* ---------- steam over hot dishes (animates only while on screen, puffs start one by one from the food) ---------- */
   var vaporIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { en.target.classList.toggle('is-live', en.isIntersecting); });
   }, { rootMargin: '80px 0px' });
@@ -246,7 +246,7 @@
       for (var i = 0; i < n; i++) {
         var d = 4.6 + Math.random() * 2.8;
         html += '<i style="--x:' + (28 + Math.random() * 44).toFixed(1) + '%;--s:' + (34 + Math.random() * 22).toFixed(1) + '%;--d:' + d.toFixed(2) +
-          's;--delay:' + (-(i / n) * d - Math.random() * 0.6).toFixed(2) + 's;--sway:' + (Math.random() * 36 - 18).toFixed(0) + 'px;--tilt:' + (Math.random() * 24 - 12).toFixed(0) +
+          's;--delay:' + ((i / n) * d + Math.random() * 0.6).toFixed(2) + 's;--sway:' + (Math.random() * 36 - 18).toFixed(0) + 'px;--tilt:' + (Math.random() * 24 - 12).toFixed(0) +
           'deg;--o:' + (0.4 + Math.random() * 0.22).toFixed(2) + '"></i>';
       }
       v.innerHTML = html;
