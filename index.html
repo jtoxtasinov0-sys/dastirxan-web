@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add('js')</script>
+<title>Dastirxan: o‘zbek milliy taomlari restorani, Incheon</title>
+<meta name="description" content="Samarqand palovi, olovli mangal va chin o‘zbekona mehmondo‘stlik. Incheon, Yeonsu-gu. Har kuni 11:00-23:00. Stol band qiling: 010-3247-4734.">
+<meta name="theme-color" content="#1E0814">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://dastirxan-web.vercel.app/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Dastirxan Uzbek Cuisine">
+<meta property="og:title" content="Dastirxan: haqiqiy ta’m shu yerdan boshlanadi">
+<meta property="og:description" content="Incheondagi o‘zbek milliy taomlari restorani. Samarqand palovi, mangal, banketlar. Har kuni 11:00-23:00.">
+<meta property="og:image" content="https://dastirxan-web.vercel.app/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://dastirxan-web.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/img/food/palov.webp" as="image" fetchpriority="high">
+<link rel="preload" href="assets/fonts/marcellus-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Dastirxan Uzbek Cuisine",
+  "alternateName": "다스티르한",
+  "image": "https://dastirxan-web.vercel.app/assets/img/og.jpg",
+  "url": "https://dastirxan-web.vercel.app/",
+  "telephone": "+82-10-3247-4734",
+  "servesCuisine": ["Uzbek", "Central Asian"],
+  "priceRange": "₩₩",
+  "acceptsReservations": "True",
+  "menu": "https://publuu.com/flip-book/977121/2147871",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "연수동 507-7, 2층",
+    "addressLocality": "인천 연수구",
+    "postalCode": "21913",
+    "addressCountry": "KR"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "11:00",
+    "closes": "23:00"
+  }],
+  "sameAs": ["https://www.instagram.com/dastirxan_incheon/"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Asosiy qismga o‘tish</a>
+
+<!-- Brand mark (ikat "almond" motif from the logo) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="almond" d="M3 0h2v2h1v2h1v2h1v4h-1v2h-1v2h-1v2h-2v-2h-1v-2h-1v-2h-1v-4h1v-2h1v-2h1z"/>
+    <symbol id="mark" viewBox="0 0 36 44" shape-rendering="crispEdges">
+      <use href="#almond" x="0" y="0" fill="#E46586"/><use href="#almond" x="14" y="0" fill="#F9CA9D"/><use href="#almond" x="28" y="0" fill="#E46586"/>
+      <use href="#almond" x="7" y="14" fill="#E46586"/><use href="#almond" x="21" y="14" fill="#E46586"/>
+      <use href="#almond" x="0" y="28" fill="#E46586"/><use href="#almond" x="14" y="28" fill="#F9CA9D"/><use href="#almond" x="28" y="28" fill="#E46586"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="nav__inner wrap">
+    <a class="brand" href="#top" aria-label="Dastirxan">
+      <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <img class="brand__word" src="assets/img/wordmark.webp" alt="Dastirxan" width="825" height="108">
+    </a>
+    <nav class="nav__links" aria-label="Asosiy">
+      <a href="#menu" data-i18n="nav.menu">Menyu</a>
+      <a href="#sets" data-i18n="nav.sets">Setlar</a>
+      <a href="#banquet" data-i18n="nav.banquet">Banketlar</a>
+      <a href="#gallery" data-i18n="nav.gallery">Galereya</a>
+      <a href="#visit" data-i18n="nav.visit">Manzil</a>
+    </nav>
+    <div class="nav__right">
+      <span class="status" data-status><span class="status__dot"></span><span class="status__text"></span></span>
+      <div class="lang" data-lang>
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" data-i18n-aria="lang.label" aria-label="Tilni tanlash">
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-globe-simple"/></svg>
+          <span class="lang__cur">UZ</span>
+        </button>
+        <ul class="lang__menu" role="menu">
+          <li><button type="button" role="menuitem" data-set-lang="uz">O‘zbekcha</button></li>
+          <li><button type="button" role="menuitem" data-set-lang="ru">Русский</button></li>
+          <li><button type="button" role="menuitem" data-set-lang="en">English</button></li>
+          <li><button type="button" role="menuitem" data-set-lang="ko">한국어</button></li>
+        </ul>
+      </div>
+      <button class="btn btn--pink btn--sm nav__cta" type="button" data-book data-i18n="cta.book">Stol band qilish</button>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" data-i18n-aria="nav.open" aria-label="Menyuni ochish">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="drawer" id="drawer" hidden>
+    <a href="#menu" data-i18n="nav.menu">Menyu</a>
+    <a href="#sets" data-i18n="nav.sets">Setlar</a>
+    <a href="#banquet" data-i18n="nav.banquet">Banketlar</a>
+    <a href="#gallery" data-i18n="nav.gallery">Galereya</a>
+    <a href="#visit" data-i18n="nav.visit">Manzil</a>
+    <span class="status status--drawer" data-status><span class="status__dot"></span><span class="status__text"></span></span>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__pattern" aria-hidden="true"></div>
+  <div class="hero__inner wrap">
+    <div class="hero__copy">
+      <p class="script hero__script" data-i18n="hero.script">Xush kelibsiz</p>
+      <h1 class="hero__title" data-i18n="hero.title" data-split>Haqiqiy ta’m shu yerdan boshlanadi</h1>
+      <p class="hero__sub" data-i18n="hero.sub">Samarqand palovi, olovli mangal va chin o‘zbekona mehmondo‘stlik. Har kuni 11:00 dan 23:00 gacha.</p>
+      <div class="hero__ctas">
+        <button class="btn btn--pink magnetic" type="button" data-book>
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar-blank"/></svg>
+          <span data-i18n="cta.book">Stol band qilish</span>
+        </button>
+        <a class="btn btn--ghost magnetic" href="#menu">
+          <span data-i18n="cta.menu">Menyuni ko‘rish</span>
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__stage" aria-hidden="true">
+      <div class="hero__halo"></div>
+      <div class="hero__ring"></div>
+      <div class="plate plate--hero">
+        <div class="plate__scroll">
+          <div class="plate__drop">
+            <img class="plate__img" src="assets/img/food/palov.webp" alt="" width="437" height="435" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+      <svg class="steam" viewBox="0 0 200 260" preserveAspectRatio="none">
+        <path d="M60 250 C 40 200, 90 180, 70 130 S 60 60, 85 10"/>
+        <path d="M100 250 C 120 205, 80 170, 105 120 S 125 55, 100 5"/>
+        <path d="M140 250 C 160 210, 120 185, 140 135 S 150 70, 128 15"/>
+      </svg>
+      <div class="floater floater--samsa"><div class="floater__in"><img src="assets/img/food/float-samsa.webp" alt="" width="243" height="253"></div></div>
+      <div class="floater floater--achichuk"><div class="floater__in"><img src="assets/img/food/float-achichuk.webp" alt="" width="360" height="227"></div></div>
+      <div class="floater floater--basket"><div class="floater__in"><img src="assets/img/food/float-basket.webp" alt="" width="423" height="278"></div></div>
+      <div class="badge">
+        <svg class="badge__ring" viewBox="0 0 200 200">
+          <defs><path id="badgeCircle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#badgeCircle">UZBEK CUISINE · EST 2025 · INCHEON · DASTIRXAN ·</textPath></text>
+        </svg>
+        <svg class="badge__mark"><use href="#mark"/></svg>
+      </div>
+      <div class="embers"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features edge-top" aria-label="Dastirxan">
+  <ul class="features__list wrap">
+    <li class="feat" data-reveal>
+      <span class="feat__icon"><svg class="feat__ring" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-cooking-pot"/></svg></span>
+      <h3 data-i18n="feat.1.t">Asl retseptlar</h3><p data-i18n="feat.1.d">O‘zbek oshxonasining an’anaviy ta’mi</p>
+    </li>
+    <li class="feat" data-reveal>
+      <span class="feat__icon"><svg class="feat__ring" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-fire"/></svg></span>
+      <h3 data-i18n="feat.2.t">Jonli olovda mangal</h3><p data-i18n="feat.2.d">Shashlik va steyklar olovdan to‘g‘ri dasturxonga</p>
+    </li>
+    <li class="feat" data-reveal>
+      <span class="feat__icon"><svg class="feat__ring" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-users-three"/></svg></span>
+      <h3 data-i18n="feat.3.t">Katta davra setlari</h3><p data-i18n="feat.3.d">4-8 kishilik mangal setlar</p>
+    </li>
+    <li class="feat" data-reveal>
+      <span class="feat__icon"><svg class="feat__ring" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-confetti"/></svg></span>
+      <h3 data-i18n="feat.4.t">To‘y va banketlar</h3><p data-i18n="feat.4.d">Muhim kunlaringiz uchun maxsus menyu</p>
+    </li>
+    <li class="feat" data-reveal>
+      <span class="feat__icon"><svg class="feat__ring" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-truck"/></svg></span>
+      <h3 data-i18n="feat.5.t">Yetkazib berish</h3><p data-i18n="feat.5.d">Sevimli taomlaringizni uyda ham tatib ko‘ring</p>
+    </li>
+  </ul>
+</section>
+
+<!-- SIGNATURE PLATES -->
+<section class="sig" id="favorites">
+  <div class="sig__float sig__float--l" aria-hidden="true"><img src="assets/img/food/float-dolma.webp" alt="" width="255" height="255" loading="lazy"></div>
+  <div class="sig__float sig__float--r" aria-hidden="true"><img src="assets/img/food/float-samsa.webp" alt="" width="243" height="253" loading="lazy"></div>
+  <div class="wrap">
+    <header class="sig__head" data-reveal>
+      <p class="script" data-i18n="sig.script">Dasturxonimizdan</p>
+      <h2 class="h2" data-i18n="sig.title">Mehmonlar eng ko‘p tanlaydigan taomlar</h2>
+    </header>
+    <div class="tabs sig__tabs" role="tablist" data-sig-tabs></div>
+    <div class="sig__stage">
+      <div class="sig__trayWrap" aria-hidden="true"><div class="sig__tray"></div></div>
+      <div class="sig__plates" data-sig-plates aria-live="polite"></div>
+    </div>
+    <div class="sig__more">
+      <a class="btn btn--ghost magnetic" href="#menu"><span data-i18n="sig.all">To‘liq menyu</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- LUNCH OFFER -->
+<section class="lunch edge-top" id="lunch">
+  <div class="lunch__pattern" aria-hidden="true"></div>
+  <div class="lunch__inner wrap">
+    <div class="lunch__visual" aria-hidden="true">
+      <div class="lunch__glow"></div>
+      <img class="lunch__img" src="assets/img/food/lunch-set.webp" alt="" width="467" height="474" loading="lazy">
+    </div>
+    <div class="lunch__copy" data-reveal>
+      <p class="eyebrow" data-i18n="lunch.eyebrow">Tushlik taklifi · 12:00-16:00</p>
+      <h2 class="h2" data-i18n="lunch.title">Samarqand palov SET</h2>
+      <p class="lead" data-i18n="lunch.items">Palov, salat, non va choy yoki ichimlik. Bir kishilik to‘liq tushlik, har kuni.</p>
+      <p class="lunch__price"><span class="lunch__num" data-count-to="20000" data-count-format="won">20,000</span><span class="won">₩</span></p>
+      <p class="lunch__live" data-lunch-live><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-timer"/></svg><span></span></p>
+      <button class="btn btn--pink magnetic" type="button" data-book>
+        <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar-blank"/></svg>
+        <span data-i18n="cta.book">Stol band qilish</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- STORY BENTO -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="bento">
+      <article class="bento__text" data-reveal>
+        <svg class="bento__mark" aria-hidden="true"><use href="#mark"/></svg>
+        <h2 class="h2" data-i18n="story.title">Dasturxon: mehmondo‘stlik yuragi</h2>
+        <p class="lead" data-i18n="story.body">O‘zbek taomlari asrlar davomida mehr, hurmat va an’ana bilan sayqallangan.</p>
+        <p class="script bento__sign" data-i18n="story.sign">Xush kelibsiz.</p>
+      </article>
+      <figure class="bento__img bento__img--mural ikat-reveal">
+        <img src="assets/img/photo/story-mural.webp" alt="" width="460" height="420" loading="lazy">
+        <figcaption data-i18n="story.mural">Zalimizdagi Registon surati</figcaption>
+      </figure>
+      <figure class="bento__img bento__img--chef ikat-reveal">
+        <img src="assets/img/photo/story-chef.webp" alt="" width="460" height="669" loading="lazy">
+        <figcaption data-i18n="story.chef">Oshpazlarimiz an’anaviy retseptlar asosida pishiradi</figcaption>
+      </figure>
+      <figure class="bento__img bento__img--wall ikat-reveal">
+        <img src="assets/img/photo/story-wall.webp" alt="Dastirxan Uzbek Cuisine" width="445" height="560" loading="lazy">
+      </figure>
+      <figure class="bento__img bento__img--shelf ikat-reveal">
+        <img src="assets/img/photo/story-shelf.webp" alt="" width="437" height="805" loading="lazy">
+        <figcaption data-i18n="story.shelf">Jonli o‘simliklar, sopol idishlar, iliq yog‘och</figcaption>
+      </figure>
+      <blockquote class="bento__quote" data-reveal>
+        <p data-i18n="story.quote">Har bir ta’m madaniyat, har bir likopcha hikoya.</p>
+      </blockquote>
+    </div>
+
+    <dl class="stats">
+      <div class="stat" data-reveal><dt class="stat__num">11<span>:00</span>-23<span>:00</span></dt><dd data-i18n="facts.hours">har kuni ochiqmiz</dd></div>
+      <div class="stat" data-reveal><dt class="stat__num"><span data-count-to="140">140</span>+</dt><dd data-i18n="facts.items">taom va ichimlik</dd></div>
+      <div class="stat" data-reveal><dt class="stat__num"><span data-count-to="10">10</span>K</dt><dd data-i18n="facts.ig">Instagram’da kuzatadi</dd></div>
+      <div class="stat" data-reveal><dt class="stat__num"><span data-count-to="2025" data-count-from="1990">2025</span></dt><dd data-i18n="facts.year">yildan beri Incheonda</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- GRILL SETS -->
+<section class="sets" id="sets">
+  <div class="wrap">
+    <header class="sets__head" data-reveal>
+      <h2 class="h2" data-i18n="sets.title">Katta davra uchun mangal setlar</h2>
+      <p class="lead" data-i18n="sets.sub">Olovda pishgan go‘sht, katta likopchada, butun davra uchun.</p>
+    </header>
+    <div class="sets__list" data-sets></div>
+  </div>
+</section>
+
+<!-- FULL MENU -->
+<section class="menu edge-top" id="menu">
+  <div class="wrap">
+    <header class="menu__head" data-reveal>
+      <h2 class="h2" data-i18n="menu.title">Menyu</h2>
+      <p class="lead" data-i18n="menu.sub">140 dan ortiq taom va ichimlik. Narxlar vonda (₩).</p>
+    </header>
+    <div class="menu__tools">
+      <label class="search">
+        <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-magnifying-glass"/></svg>
+        <input type="search" data-menu-search data-i18n-ph="menu.search" placeholder="Taom yoki ichimlik qidiring" aria-label="Qidiruv" autocomplete="off">
+      </label>
+      <div class="menu__links">
+        <a href="https://publuu.com/flip-book/977121/2147871" target="_blank" rel="noopener"><span data-i18n="menu.photo">Rasmli menyu</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-up-right"/></svg></a>
+        <a href="https://heyzine.com/flip-book/eabb49cfd2.html" target="_blank" rel="noopener"><span data-i18n="menu.drinks">Ichimliklar menyusi</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+    <div class="tabs menu__tabs" role="tablist" data-menu-tabs></div>
+    <p class="menu__count" data-menu-count aria-live="polite"></p>
+    <ul class="menu__list" data-menu-list></ul>
+    <p class="menu__empty" data-menu-empty hidden data-i18n="menu.empty">Hech narsa topilmadi.</p>
+  </div>
+</section>
+
+<!-- BANQUET -->
+<section class="banquet" id="banquet">
+  <div class="banquet__bg" aria-hidden="true"><img src="assets/img/photo/banquet.webp" alt="" loading="lazy" width="460" height="819"></div>
+  <div class="banquet__inner wrap">
+    <figure class="banquet__photo ikat-reveal">
+      <img src="assets/img/photo/banquet.webp" alt="" loading="lazy" width="460" height="819">
+    </figure>
+    <div class="banquet__copy">
+      <h2 class="h2" data-reveal data-i18n="banquet.title">To‘y, tug‘ilgan kun va banketlar</h2>
+      <p class="lead" data-reveal data-i18n="banquet.body">Muhim kunlaringizni Dastirxan’da nishonlang.</p>
+      <ul class="ticks" data-reveal>
+        <li><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-check"/></svg><span data-i18n="banquet.p1"></span></li>
+        <li><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-check"/></svg><span data-i18n="banquet.p2"></span></li>
+        <li><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-check"/></svg><span data-i18n="banquet.p3"></span></li>
+      </ul>
+      <form class="card form" data-form="banquet" novalidate data-reveal>
+        <h3 class="form__title" data-i18n="banquet.form">Banket uchun ariza</h3>
+        <div class="form__grid">
+          <div class="field">
+            <label for="bq-type" data-i18n="f.type">Tadbir turi</label>
+            <div class="select">
+              <select id="bq-type" name="type">
+                <option value="t.wedding" data-i18n="t.wedding">To‘y</option>
+                <option value="t.birthday" data-i18n="t.birthday">Tug‘ilgan kun</option>
+                <option value="t.corporate" data-i18n="t.corporate">Korporativ</option>
+                <option value="t.other" data-i18n="t.other">Boshqa tadbir</option>
+              </select>
+              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-caret-down"/></svg>
+            </div>
+          </div>
+          <div class="field">
+            <label for="bq-date" data-i18n="f.date">Sana</label>
+            <input id="bq-date" name="date" type="date" required>
+            <p class="field__err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="bq-guests" data-i18n="f.guests">Mehmonlar soni</label>
+            <input id="bq-guests" name="guests" type="number" inputmode="numeric" min="1" max="300" value="30" required>
+            <p class="field__err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="bq-name" data-i18n="f.name">Ismingiz</label>
+            <input id="bq-name" name="name" type="text" autocomplete="name" required>
+            <p class="field__err" role="alert"></p>
+          </div>
+          <div class="field field--wide">
+            <label for="bq-phone" data-i18n="f.phone">Telefon raqamingiz</label>
+            <input id="bq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000" required>
+            <p class="field__err" role="alert"></p>
+          </div>
+        </div>
+        <button class="btn btn--pink btn--block" type="submit">
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-paper-plane-tilt"/></svg>
+          <span data-i18n="banquet.submit">Ariza yuborish</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery edge-top" id="gallery">
+  <div class="wrap">
+    <header class="gallery__head" data-reveal>
+      <p class="eyebrow" data-i18n="gallery.eyebrow">@dastirxan_incheon</p>
+      <h2 class="h2" data-i18n="gallery.title">Instagram’da biz bilan</h2>
+    </header>
+    <div class="gallery__grid" data-gallery>
+      <div class="gcol gcol--1">
+        <button class="gitem" type="button"><img src="assets/img/photo/g-01.webp" alt="" width="460" height="669" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-05.webp" alt="" width="461" height="819" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-09.webp" alt="" width="445" height="719" loading="lazy"></button>
+      </div>
+      <div class="gcol gcol--2">
+        <button class="gitem" type="button"><img src="assets/img/photo/g-02.webp" alt="" width="460" height="819" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-06.webp" alt="" width="445" height="560" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-10.webp" alt="" width="461" height="819" loading="lazy"></button>
+      </div>
+      <div class="gcol gcol--3">
+        <button class="gitem" type="button"><img src="assets/img/photo/g-03.webp" alt="" width="461" height="649" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-07.webp" alt="" width="461" height="700" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-11.webp" alt="" width="445" height="669" loading="lazy"></button>
+      </div>
+      <div class="gcol gcol--4">
+        <button class="gitem" type="button"><img src="assets/img/photo/g-04.webp" alt="" width="461" height="819" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-08.webp" alt="" width="445" height="669" loading="lazy"></button>
+        <button class="gitem" type="button"><img src="assets/img/photo/g-12.webp" alt="" width="445" height="630" loading="lazy"></button>
+      </div>
+    </div>
+    <div class="gallery__cta">
+      <a class="btn btn--ghost magnetic" href="https://www.instagram.com/dastirxan_incheon/" target="_blank" rel="noopener">
+        <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-instagram-logo"/></svg>
+        <span data-i18n="gallery.cta">Instagram’da kuzatish</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="visit__inner wrap">
+    <div class="visit__info">
+      <h2 class="h2" data-reveal data-i18n="visit.title">Bizni topish oson</h2>
+      <dl class="visit__rows">
+        <div class="vrow" data-reveal>
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-map-pin"/></svg>
+          <div><dt data-i18n="visit.addr">Manzil</dt><dd><span class="ko" data-i18n="visit.addrV">인천 연수구 연수동 507-7, 2층</span><small data-i18n="visit.addrT"></small></dd></div>
+        </div>
+        <div class="vrow" data-reveal>
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-clock"/></svg>
+          <div><dt data-i18n="visit.hours">Ish vaqti</dt><dd><span data-i18n="visit.hoursV">Har kuni, 11:00-23:00</span><small class="status status--inline" data-status><span class="status__dot"></span><span class="status__text"></span></small></dd></div>
+        </div>
+        <div class="vrow" data-reveal>
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-phone"/></svg>
+          <div><dt data-i18n="visit.phone">Telefon</dt><dd><a href="tel:+821032474734">010-3247-4734</a><a href="tel:+82328174734">032-817-4734</a></dd></div>
+        </div>
+        <div class="vrow" data-reveal>
+          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-car"/></svg>
+          <div><dt data-i18n="visit.parking">Avtoturargoh</dt><dd><span class="ko" data-i18n="visit.parkingV">연수길프라자 주차장 입구</span><small data-i18n="visit.parkingT"></small></dd></div>
+        </div>
+      </dl>
+      <div class="maps" data-reveal>
+        <a class="chip" href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%97%B0%EC%88%98%EB%8F%99%20507-7" target="_blank" rel="noopener">Naver Map<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-up-right"/></svg></a>
+        <a class="chip" href="https://map.kakao.com/link/search/%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%97%B0%EC%88%98%EB%8F%99%20507-7" target="_blank" rel="noopener">Kakao Map<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-up-right"/></svg></a>
+        <a class="chip" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%97%B0%EC%88%98%EB%8F%99%20507-7" target="_blank" rel="noopener">Google Maps<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-up-right"/></svg></a>
+      </div>
+    </div>
+    <div class="visit__map ikat-reveal">
+      <iframe data-i18n-title="visit.mapTitle" title="Dastirxan xaritada" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%97%B0%EC%88%98%EB%8F%99%20507-7&amp;z=16&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final edge-top">
+  <div class="final__pattern" aria-hidden="true"></div>
+  <div class="final__stripe final__stripe--l" aria-hidden="true"></div>
+  <div class="final__stripe final__stripe--r" aria-hidden="true"></div>
+  <div class="final__inner wrap" data-reveal>
+    <svg class="final__mark" aria-hidden="true"><use href="#mark"/></svg>
+    <h2 class="final__title" data-i18n="final.title" data-split>Dasturxon tayyor. Sizni kutamiz.</h2>
+    <p class="lead" data-i18n="final.sub">Stolni hoziroq band qiling.</p>
+    <div class="final__ctas">
+      <button class="btn btn--pink magnetic" type="button" data-book>
+        <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar-blank"/></svg>
+        <span data-i18n="cta.book">Stol band qilish</span>
+      </button>
+      <a class="btn btn--ghost magnetic" href="tel:+821032474734">
+        <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-phone"/></svg>
+        <span>010-3247-4734</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner wrap">
+    <div class="footer__brand">
+      <img src="assets/img/logo.webp" alt="Dastirxan Uzbek Cuisine, est. 2025" width="825" height="377" loading="lazy">
+      <p data-i18n="footer.tag">Incheondagi o‘zbek milliy taomlari restorani.</p>
+    </div>
+    <div class="footer__col">
+      <h4 data-i18n="footer.contact">Aloqa</h4>
+      <a href="tel:+821032474734">010-3247-4734</a>
+      <a href="tel:+82328174734">032-817-4734</a>
+      <span data-i18n="visit.hoursV">Har kuni, 11:00-23:00</span>
+      <span class="ko" data-i18n="visit.addrV">인천 연수구 연수동 507-7, 2층</span>
+    </div>
+    <div class="footer__col">
+      <h4 data-i18n="footer.menus">Menyular</h4>
+      <a href="https://publuu.com/flip-book/977121/2147871" target="_blank" rel="noopener" data-i18n="menu.photo">Rasmli menyu</a>
+      <a href="https://heyzine.com/flip-book/eabb49cfd2.html" target="_blank" rel="noopener" data-i18n="menu.drinks">Ichimliklar menyusi</a>
+      <a href="#menu" data-i18n="nav.menu">Menyu</a>
+    </div>
+    <div class="footer__col">
+      <h4 data-i18n="footer.follow">Ijtimoiy tarmoq</h4>
+      <a href="https://www.instagram.com/dastirxan_incheon/" target="_blank" rel="noopener">Instagram · @dastirxan_incheon</a>
+    </div>
+  </div>
+  <div class="footer__base wrap">
+    <span>© 2025-<span data-year>2026</span> Dastirxan Uzbek Cuisine. <span data-i18n="footer.rights">Barcha huquqlar himoyalangan.</span></span>
+    <svg class="footer__mark" aria-hidden="true"><use href="#mark"/></svg>
+  </div>
+</footer>
+
+<!-- Mobile action bar -->
+<div class="mbar" data-mbar>
+  <a class="btn btn--ghost" href="tel:+821032474734"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-phone"/></svg><span data-i18n="bar.call">Qo‘ng‘iroq</span></a>
+  <button class="btn btn--pink" type="button" data-book><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar-blank"/></svg><span data-i18n="cta.book">Stol band qilish</span></button>
+</div>
+
+<!-- Booking dialog -->
+<dialog class="dialog" id="bookDialog" aria-labelledby="bookTitle">
+  <div class="dialog__panel">
+    <button class="dialog__x" type="button" data-close data-i18n-aria="bk.close" aria-label="Yopish"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-x"/></svg></button>
+    <div class="dialog__step" data-step="form">
+      <svg class="dialog__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <h2 class="dialog__title" id="bookTitle" data-i18n="cta.book">Stol band qilish</h2>
+      <p class="dialog__sub" data-i18n="bk.sub">Ma’lumotlarni kiriting, so‘rov matnini tayyorlab beramiz.</p>
+      <form class="form" data-form="book" novalidate>
+        <div class="form__grid">
+          <div class="field">
+            <label for="bk-date" data-i18n="f.date">Sana</label>
+            <input id="bk-date" name="date" type="date" required>
+            <p class="field__err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="bk-time" data-i18n="f.time">Vaqt</label>
+            <div class="select">
+              <select id="bk-time" name="time"></select>
+              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-caret-down"/></svg>
+            </div>
+          </div>
+          <div class="field field--wide">
+            <span class="label" id="bk-guests-l" data-i18n="f.guests">Mehmonlar soni</span>
+            <div class="stepper" role="group" aria-labelledby="bk-guests-l">
+              <button type="button" data-step-guests="-1" aria-label="-"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-minus"/></svg></button>
+              <input name="guests" type="number" inputmode="numeric" min="1" max="300" value="2" aria-labelledby="bk-guests-l">
+              <button type="button" data-step-guests="1" aria-label="+"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"/></svg></button>
+            </div>
+            <p class="field__err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="bk-name" data-i18n="f.name">Ismingiz</label>
+            <input id="bk-name" name="name" type="text" autocomplete="name" required>
+            <p class="field__err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="bk-phone" data-i18n="f.phone">Telefon raqamingiz</label>
+            <input id="bk-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000" required>
+            <p class="field__err" role="alert"></p>
+          </div>
+          <div class="field field--wide">
+            <label for="bk-note" data-i18n="f.note">Izoh (ixtiyoriy)</label>
+            <textarea id="bk-note" name="note" rows="2" data-i18n-ph="f.notePh"></textarea>
+          </div>
+        </div>
+        <button class="btn btn--pink btn--block" type="submit"><span data-i18n="bk.next">Davom etish</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow-right"/></svg></button>
+      </form>
+    </div>
+
+    <div class="dialog__step" data-step="done" hidden>
+      <svg class="dialog__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <h2 class="dialog__title" data-i18n="done.title">So‘rovingiz tayyor</h2>
+      <p class="dialog__sub" data-i18n="done.sub">Qulay usulni tanlang.</p>
+      <p class="label" data-i18n="done.preview">So‘rov matni</p>
+      <pre class="dialog__msg" data-msg></pre>
+      <div class="dialog__actions">
+        <a class="btn btn--pink btn--block" data-sms href="#"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-chat-circle-text"/></svg><span data-i18n="done.sms">SMS orqali yuborish</span></a>
+        <a class="btn btn--ghost btn--block" href="tel:+821032474734"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-phone"/></svg><span data-i18n="cta.call">Qo‘ng‘iroq qilish</span></a>
+        <button class="btn btn--ghost btn--block" type="button" data-ig><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-instagram-logo"/></svg><span data-i18n="done.ig">Nusxalab, Instagram’da yozish</span></button>
+      </div>
+      <p class="dialog__toast" data-toast hidden><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-check"/></svg><span data-i18n="done.copied">Matn nusxalandi</span></p>
+      <button class="link" type="button" data-back data-i18n="done.edit">Tahrirlash</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Lightbox -->
+<dialog class="lightbox" id="lightbox">
+  <button class="lightbox__btn lightbox__x" type="button" data-close data-i18n-aria="lb.close" aria-label="Yopish"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-x"/></svg></button>
+  <button class="lightbox__btn lightbox__prev" type="button" data-lb="-1" data-i18n-aria="lb.prev" aria-label="Oldingi rasm"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-caret-left"/></svg></button>
+  <img alt="" data-lb-img>
+  <button class="lightbox__btn lightbox__next" type="button" data-lb="1" data-i18n-aria="lb.next" aria-label="Keyingi rasm"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-caret-right"/></svg></button>
+</dialog>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/menu.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
