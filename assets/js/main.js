@@ -129,21 +129,21 @@
       if (id === sigTab) return; sigTab = id; renderSig(true);
     });
   }
-  function dishHTML(d, i) {
+  function dishHTML(d, i, hot) {
     var L = LIDX[lang];
-    return '<article class="dish" style="--i:' + i + '"><div class="dish__plate"><img src="assets/img/food/' + d.img + '.webp" alt="' + esc(d.name[L]) + '" loading="lazy" decoding="async"></div>' +
+    return '<article class="dish" style="--i:' + i + '"><div class="dish__plate">' + (hot ? '<div class="vapor" data-vapor="6"></div>' : '') + '<img src="assets/img/food/' + d.img + '.webp" alt="' + esc(d.name[L]) + '" loading="lazy" decoding="async"></div>' +
       '<h3>' + esc(d.name[L]) + '</h3><p>' + esc(d.desc[L]) + '</p><span class="price">' + won(d.price) + '</span></article>';
   }
   function renderSig(animate) {
     var box = $('[data-sig-plates]'), group = SIG.filter(function (g) { return g.id === sigTab; })[0];
-    var html = group.dishes.map(dishHTML).join('');
-    if (!animate || reduceMotion || !box.children.length) { box.innerHTML = html; return; }
-    if (sigBusy) { box.innerHTML = html; return; }
+    var hot = group.id !== 'dessert';
+    var html = group.dishes.map(function (d, i) { return dishHTML(d, i, hot); }).join('');
+    if (!animate || reduceMotion || !box.children.length || sigBusy) { box.innerHTML = html; fillVapor(box); return; }
     sigBusy = true;
     trayRot -= 120; $('.sig__tray').style.setProperty('--rot', trayRot + 'deg');
     $$('.dish', box).forEach(function (el) { el.classList.add('is-out'); });
     setTimeout(function () {
-      box.innerHTML = html;
+      box.innerHTML = html; fillVapor(box);
       var fresh = $$('.dish', box);
       fresh.forEach(function (el) { el.classList.add('is-pre'); });
       void box.offsetWidth;
@@ -158,12 +158,13 @@
       if (s.people) meta += '<span class="chip"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-users-three"/></svg>' + fill(t('sets.people'), { n: s.people.join('-') }) + '</span>';
       meta += '<span class="chip"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-timer"/></svg>' + fill(t('sets.time'), { n: s.time }) + '</span>';
       var pp = s.people ? '<span>' + fill(t('sets.pp'), { p: won(Math.round(s.price / s.people[1] / 100) * 100) }) + '</span>' : '';
-      return '<article class="set" data-reveal-set><div class="set__img"><img src="assets/img/food/' + s.img + '.webp" alt="' + esc(s.name) + '" loading="lazy" decoding="async"></div>' +
+      return '<article class="set" data-reveal-set><div class="set__img"><div class="vapor" data-vapor="6"></div><img src="assets/img/food/' + s.img + '.webp" alt="' + esc(s.name) + '" loading="lazy" decoding="async"></div>' +
         '<div class="set__body"><h3 class="set__name">' + esc(s.name) + '</h3><p class="set__desc">' + esc(t('sets.d.' + s.d)) + '</p>' +
         '<div class="set__meta">' + meta + '</div><div class="set__price"><strong>' + won(s.price) + '</strong>' + pp + '</div>' +
         '<button class="btn btn--ghost btn--sm" type="button" data-book data-guests="' + (s.people ? s.people[1] : 4) + '"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-calendar-blank"/></svg><span>' + esc(t('cta.book')) + '</span></button></div></article>';
     }).join('');
     $$('[data-reveal-set]').forEach(function (el) { io.observe(el); });
+    fillVapor($('[data-sets]'));
   }
 
   /* ---------- full menu ---------- */
@@ -231,6 +232,26 @@
       if (k < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
+  }
+
+  /* ---------- steam over hot dishes (animates only while on screen) ---------- */
+  var vaporIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { en.target.classList.toggle('is-live', en.isIntersecting); });
+  }, { rootMargin: '80px 0px' });
+  function fillVapor(root) {
+    if (reduceMotion) return;
+    $$('[data-vapor]', root).forEach(function (v) {
+      if (v.childElementCount) return;
+      var n = +v.getAttribute('data-vapor') || 6, html = '';
+      for (var i = 0; i < n; i++) {
+        var d = 4.6 + Math.random() * 2.8;
+        html += '<i style="--x:' + (28 + Math.random() * 44).toFixed(1) + '%;--s:' + (34 + Math.random() * 22).toFixed(1) + '%;--d:' + d.toFixed(2) +
+          's;--delay:' + (-(i / n) * d - Math.random() * 0.6).toFixed(2) + 's;--sway:' + (Math.random() * 36 - 18).toFixed(0) + 'px;--tilt:' + (Math.random() * 24 - 12).toFixed(0) +
+          'deg;--o:' + (0.4 + Math.random() * 0.22).toFixed(2) + '"></i>';
+      }
+      v.innerHTML = html;
+      vaporIO.observe(v);
+    });
   }
 
   /* ---------- embers rising from the plate ---------- */
@@ -407,6 +428,7 @@
 
   /* ---------- boot ---------- */
   applyLang(detectLang(), true);
+  fillVapor(document);
   embers();
   staggerGroups();
   $$('[data-reveal], .ikat-reveal, .feat, .sig__plates, .lunch__visual, [data-count-to], .final__title').forEach(function (el) { io.observe(el); });

@@ -178,7 +178,7 @@ window.DX_MENU = [
 /* Plate showcase: four tabs, three top-down plates each. Images live in assets/img/food/. */
 window.DX_SIGNATURE = [
   { id: 'national', dishes: [
-    { img: 'palov', price: 14000, name: ['Samarqand palovi', 'Самаркандский плов', 'Samarkand plov', '사마르칸트식 프러브'],
+    { img: 'palov-hd', price: 14000, name: ['Samarqand palovi', 'Самаркандский плов', 'Samarkand plov', '사마르칸트식 프러브'],
       desc: ['Qozonda damlangan guruch, mol go‘shti, sariq sabzi va no‘xat.', 'Рис из казана, говядина, жёлтая морковь и нут.', 'Kazan-cooked rice, beef, yellow carrots and chickpeas.', '카잔에 지은 밥, 소고기, 노란 당근, 병아리콩.'] },
     { img: 'manti', price: 14000, name: ['Manti', 'Манты', 'Manti', '만티'],
       desc: ['Bug‘da pishgan, ichida issiq va suvli bulyoni bor.', 'На пару, с горячим сочным бульоном внутри.', 'Steamed, with hot juicy broth inside.', '쪄낸 만두 속에 뜨거운 육즙이 가득합니다.'] },
