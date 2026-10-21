@@ -171,12 +171,27 @@ html[lang="ru"] .script { font-size: clamp(28px, 3vw, 42px); }
   mask: radial-gradient(circle, transparent calc(50% - 9px), #000 calc(50% - 8px), #000 50%, transparent calc(50% + 1px));
   animation: spin 160s linear infinite reverse; opacity: .75; }
 
-/* steam rises from the centre of the plate */
-.steam { --sw: calc(var(--plate) * .36); --sh: calc(var(--plate) * .62); position: absolute; z-index: 3; width: var(--sw); height: var(--sh); right: calc(-1 * var(--off) + var(--plate) / 2 - var(--sw) / 2); top: calc(50% - var(--sh) + var(--plate) * .06); pointer-events: none; overflow: visible; filter: blur(7px); }
-.steam path { fill: none; stroke: rgba(255, 244, 236, .5); stroke-width: 9; stroke-linecap: round; stroke-dasharray: 60 260; stroke-dashoffset: 320; opacity: 0; animation: steam 5.2s ease-in-out infinite; }
-.steam path:nth-child(2) { animation-delay: 1.7s; stroke-width: 12; }
-.steam path:nth-child(3) { animation-delay: 3.3s; }
-@keyframes steam { 0% { stroke-dashoffset: 320; opacity: 0; } 25% { opacity: .85; } 75% { opacity: .3; } 100% { stroke-dashoffset: 20; opacity: 0; } }
+/* soft steam: blurred-looking puffs (radial gradients, transform + opacity only) rising off hot food */
+.vapor { position: absolute; z-index: 3; pointer-events: none; }
+.vapor i { position: absolute; bottom: 0; left: var(--x); width: var(--s); aspect-ratio: 1 / 1.55; border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 249, 244, .62) 0%, rgba(255, 249, 244, .26) 36%, rgba(255, 249, 244, 0) 72%);
+  transform-origin: 50% 100%; opacity: 0; mix-blend-mode: screen; will-change: transform, opacity;
+  animation: vapor var(--d) cubic-bezier(.3, .15, .45, 1) var(--delay) infinite; animation-play-state: paused; }
+.vapor.is-live i { animation-play-state: running; }
+/* faint over the food, strongest once it clears the rim and meets the dark room, then it dissolves */
+@keyframes vapor {
+  0% { transform: translate(-50%, 20%) scale(.34, .44) rotate(0deg); opacity: 0; }
+  16% { opacity: calc(var(--o) * .55); }
+  52% { transform: translate(calc(-50% + var(--sway)), -75%) scale(.9, 1.06) rotate(calc(var(--tilt) * .5)); opacity: var(--o); }
+  80% { opacity: calc(var(--o) * .65); }
+  100% { transform: translate(calc(-50% - var(--sway)), var(--rise, -195%)) scale(1.6, 1.85) rotate(var(--tilt)); opacity: 0; }
+}
+.vapor--hero { animation: fadeIn 1.6s ease 1.7s both; width: calc(var(--plate) * .56); height: calc(var(--plate) * .8); right: calc(-1 * var(--off) + var(--plate) * .22); top: calc(50% - var(--plate) * .66); }
+.vapor--lunch { width: 46%; height: 62%; left: 14%; top: -14%; }
+.dish__plate { position: relative; }
+.dish__plate .vapor { --rise: -130%; width: 58%; height: 70%; left: 21%; bottom: 48%; }
+.set__img { position: relative; }
+.set__img .vapor { --rise: -140%; width: 62%; height: 90%; left: 19%; bottom: 42%; }
 
 .floater { position: absolute; z-index: 4; pointer-events: none; }
 .floater__in { animation: floatIn 1.6s var(--ease) both, bob 7s ease-in-out 1.6s infinite; }
@@ -212,6 +227,7 @@ html[lang="ru"] .script { font-size: clamp(28px, 3vw, 42px); }
 .hero__script, .hero__sub, .hero__ctas { animation: fadeUp 1s var(--ease) both; }
 .hero__script { animation-delay: .1s; } .hero__sub { animation-delay: .9s; } .hero__ctas { animation-delay: 1.05s; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } }
+@keyframes fadeIn { from { opacity: 0; } }
 .hero__script { animation-name: fadeUpRot; }
 @keyframes fadeUpRot { from { opacity: 0; transform: translateY(22px) rotate(-4deg); } to { transform: rotate(-4deg); } }
 
@@ -595,7 +611,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; }
   .plate__img, .hero__ring, .badge__ring, .lunch__img, .final__pattern, .floater__in { animation: none !important; }
-  .steam, .embers { display: none; }
+  .vapor, .embers { display: none; }
   html.js .ikat-reveal { -webkit-mask: none; mask: none; }
   html.js .ikat-reveal img { transform: none; }
 }
